@@ -2,7 +2,7 @@ from attr import resolve_types
 import pytest
 import  unittest
 from flask import json
-from s import palindro,rev,sorting
+from code import palindrom,rev,sorting
 
 
 class TestSum(unittest.TestCase):
@@ -10,7 +10,7 @@ class TestSum(unittest.TestCase):
 
    def test_1(self):
       string=''
-      result=palindro(string)
+      result=palindrom(string)
       self.assertEqual(result,True)
       print('test_1 succes')
       # working for null string too.
@@ -18,14 +18,14 @@ class TestSum(unittest.TestCase):
 
    def test_2(self):
       string = '@3nn3@'
-      result=palindro(string)
+      result=palindrom(string)
       self.assertEqual(result,True)
       print('test_2 succes')
       # working for alphanumeric value
    
    def test_3(self):
       string = 'Nen'
-      result=palindro(string)
+      result=palindrom(string)
       self.assertEqual(result,False)
       print('test_3 succes')
       # considering differently  to Uppercase and Lowercase of same char.
@@ -33,7 +33,7 @@ class TestSum(unittest.TestCase):
 
    def test_4(self):
       string = 'Never odd or even'
-      result=palindro(string)
+      result=palindrom(string)
       self.assertEqual(result,False)
       print('test_4 succes')
       #also working  for  sentence but only in negative case.
@@ -42,7 +42,7 @@ class TestSum(unittest.TestCase):
    def test_5(self):
       # given string is palindrom without spaces
       string='do geese see god'
-      result=palindro(string)
+      result=palindrom(string)
       # print(result)
       self.assertEqual(result,False)
       print('test_5 succes')
